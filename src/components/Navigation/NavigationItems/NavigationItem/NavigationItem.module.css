@@ -1,0 +1,30 @@
+.NavigationItem{
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+.NavigationItem a {
+    color: white;
+    text-decoration: none;
+    padding: 16px 10px;
+    border-bottom: 4px solid transparent;
+    display: block;
+}
+.NavigationItem a:hover, 
+.NavigationItem a:focus, 
+.NavigationItem a:active{
+    background-color: #8F5C2C;
+    border-bottom: 4px solid #8bacdc;
+    color: white;
+}
+
+@media (max-width:600px) {
+    .NavigationItem a,
+    .NavigationItem a:hover, 
+    .NavigationItem a:focus, 
+    .NavigationItem a:active {
+        background-color: transparent;
+        color: #426396;
+    }   
+}
