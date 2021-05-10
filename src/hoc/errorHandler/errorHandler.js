@@ -5,17 +5,16 @@ import useHttpErrorHandler from '../../hooks/http-error';
 const ErrorHandler = (WrappedComponent, axios) => {
     
     const InnerFunction = props => {
-            const [error, backdropClickedHandler] = useHttpErrorHandler(axios);
-            return (
-                <Aux>
-                    <Modal showModal={error}
-                    updatePurchasingState={backdropClickedHandler}
-                    >{error ? error.message : null}</Modal>
-                    <WrappedComponent {...props} />
-                </Aux>
-            );
-            
-        }
+        const [error, backdropClickedHandler] = useHttpErrorHandler(axios);
+        return (
+            <Aux>
+                <Modal showModal={error}
+                updatePurchasingState={backdropClickedHandler}
+                >{error ? error.message : null}</Modal>
+                <WrappedComponent {...props} />
+            </Aux>
+        );        
+    }
     return InnerFunction;
     
 }
